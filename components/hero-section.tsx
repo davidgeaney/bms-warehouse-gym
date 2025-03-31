@@ -43,7 +43,7 @@ export function HeroSection() {
         <div className="relative w-full h-full">
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/30 z-10"></div>
           <Image
-            src="/images/bmsheroimage.png"
+            src="/images/backgrounds/bmsheroimage.webp"
             alt="Fitness athlete running"
             fill
             className="object-cover brightness-75"

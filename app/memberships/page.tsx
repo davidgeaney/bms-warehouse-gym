@@ -40,177 +40,145 @@ export default function MembershipsPage() {
   const plans: Plan[] = [
     // Bundoran memberships
     {
-      id: "basic-bundoran",
-      name: "Basic",
-      price: 49,
+      id: "nrg-group-bundoran",
+      name: "NRG Group Training",
+      price: 79,
       period: "month",
-      description: "Perfect for those starting their fitness journey",
+      description: "Group training sessions designed for all fitness levels",
       features: [
-        { name: "Gym access (6am-10pm)", included: true },
-        { name: "Basic fitness assessment", included: true },
-        { name: "2 group classes per week", included: true },
-        { name: "Locker room access", included: true },
-        { name: "Fitness app access", included: true },
-        { name: "Workout plan", included: true },
-        { name: "Free WiFi", included: true },
+        { name: "Instructor Led Sessions", included: true },
+        { name: "Free Access To Our App", included: true },
+        { name: "Suitable For All Fitness Levels", included: true },
+        { name: "Monthly Rolling Membership", included: true },
+        { name: "30 Days Notice for Cancellation", included: true },
       ],
-      cta: "Sign Up Now",
-      ctaLink: "/contact?plan=basic-bundoran",
+      cta: "Join Now",
+      ctaLink: "/contact?plan=nrg-group-bundoran",
       location: "bundoran",
     },
     {
-      id: "premium-bundoran",
-      name: "Premium",
-      price: 79,
+      id: "platinum-bundoran",
+      name: "Platinum Membership",
+      price: 95,
       period: "month",
-      description: "Our most popular plan for fitness enthusiasts",
+      description: "Complete access to group training and gym facilities",
       popular: true,
       badge: "Most Popular",
       features: [
-        { name: "24/7 gym access", included: true },
-        { name: "Comprehensive fitness assessment", included: true },
-        { name: "Unlimited group classes", included: true },
-        { name: "Personal training sessions", included: "1 per month" },
-        { name: "Nutrition consultation", included: true },
-        { name: "Premium app features", included: true },
-        { name: "Towel service", included: true },
+        { name: "Unlimited Access To All Group Training", included: true },
+        { name: "Unlimited Access To The Gym", included: true },
+        { name: "1 Free Body Scan Each Month", included: true },
+        { name: "Suitable For All Fitness Levels", included: true },
+        { name: "1 Month Rolling Membership", included: true },
+        { name: "30 Days Notice for Cancellation", included: true },
       ],
       cta: "Join Now",
-      ctaLink: "/contact?plan=premium-bundoran",
+      ctaLink: "/contact?plan=platinum-bundoran",
       location: "bundoran",
     },
     {
-      id: "elite-bundoran",
-      name: "Elite",
-      price: 99,
+      id: "diamond-bundoran",
+      name: "Diamond Membership",
+      price: 130,
       period: "month",
-      description: "The ultimate fitness experience with premium perks",
+      description: "Premium membership with access to all facilities and programs",
       features: [
-        { name: "24/7 gym access", included: true },
-        { name: "Comprehensive fitness assessment", included: true },
-        { name: "Unlimited group classes", included: true },
-        { name: "Personal training sessions", included: "2 per month" },
-        { name: "Nutrition consultation", included: true },
-        { name: "Premium app features", included: true },
-        { name: "Towel service", included: true },
-        { name: "Recovery zone access", included: true },
-        { name: "Guest passes", included: "2 per month" },
+        { name: "Unlimited Gym Access", included: true },
+        { name: "Unlimited Group Training", included: true },
+        { name: "Unlimited SoulRevive (Bundoran)", included: true },
+        { name: "Personalised Hyrox Training Programme", included: true },
+        { name: "Access All BMS Gyms", included: true },
+        { name: "Monthly Rolling Membership", included: true },
       ],
       cta: "Join Now",
-      ctaLink: "/contact?plan=elite-bundoran",
+      ctaLink: "/contact?plan=diamond-bundoran",
       location: "bundoran",
     },
     {
-      id: "student-bundoran",
-      name: "Student",
-      price: 39,
+      id: "1-month-gym-bundoran",
+      name: "1 Month Gym Membership",
+      price: 50,
       period: "month",
-      description: "Special rate for full-time students",
+      description: "Basic gym access with monthly renewal",
       features: [
-        { name: "Gym access (6am-10pm)", included: true },
-        { name: "Basic fitness assessment", included: true },
-        { name: "2 group classes per week", included: true },
-        {
-          name: "Valid student ID required",
-          included: true,
-          tooltip: "Must present a valid student ID from an accredited institution",
-        },
-        { name: "Locker room access", included: true },
-        { name: "Fitness app access", included: true },
+        { name: "Unlimited Gym Access", included: true },
+        { name: "Monthly Rolling Membership", included: true },
+        { name: "30 Days Notice for Cancellation", included: true },
       ],
       cta: "Join Now",
-      ctaLink: "/contact?plan=student-bundoran",
+      ctaLink: "/contact?plan=1-month-gym-bundoran",
       location: "bundoran",
     },
     {
-      id: "senior-bundoran",
-      name: "Senior",
-      price: 39,
-      period: "month",
-      description: "For members aged 65+",
+      id: "3-month-gym-bundoran",
+      name: "3 Month Gym Membership",
+      price: 140,
+      period: "one-time",
+      description: "3-month commitment with savings",
       features: [
-        { name: "Gym access (6am-10pm)", included: true },
-        { name: "Basic fitness assessment", included: true },
-        { name: "Senior-focused classes", included: true },
-        { name: "Personalized workout plan", included: true },
-        { name: "Locker room access", included: true },
-        { name: "Fitness app access", included: true },
+        { name: "Unlimited Gym Access", included: true },
+        { name: "3 Months Membership", included: true },
+        { name: "One-time Payment", included: true },
       ],
       cta: "Join Now",
-      ctaLink: "/contact?plan=senior-bundoran",
+      ctaLink: "/contact?plan=3-month-gym-bundoran",
       location: "bundoran",
     },
     {
-      id: "family-bundoran",
-      name: "Family",
-      price: 129,
-      period: "month",
-      description: "For families up to 4 members",
+      id: "6-month-gym-bundoran",
+      name: "6 Month Gym Membership",
+      price: 260,
+      period: "one-time",
+      description: "6-month commitment with greater savings",
       features: [
-        { name: "Gym access for all members", included: true },
-        { name: "Family fitness assessment", included: true },
-        { name: "Access to all classes", included: true },
-        { name: "Shared nutrition consultation", included: true },
-        { name: "Locker room access", included: true },
-        { name: "Fitness app access for all", included: true },
-        { name: "Additional members", included: "€25/month each" },
+        { name: "Unlimited Gym Access", included: true },
+        { name: "6 Months Membership", included: true },
+        { name: "One-time Payment", included: true },
       ],
       cta: "Join Now",
-      ctaLink: "/contact?plan=family-bundoran",
+      ctaLink: "/contact?plan=6-month-gym-bundoran",
       location: "bundoran",
     },
     {
-      id: "corporate-bundoran",
-      name: "Corporate",
-      price: "Custom",
-      period: "",
-      description: "Special rates for businesses",
+      id: "1-year-gym-bundoran",
+      name: "1 Year Gym Membership",
+      price: 470,
+      period: "one-time",
+      description: "Best value annual membership",
       features: [
-        { name: "Discounted rates for employees", included: true },
-        { name: "Team building activities", included: true },
-        { name: "Corporate wellness programs", included: true },
-        { name: "Dedicated account manager", included: true },
-        { name: "Customized group classes", included: true },
-        {
-          name: "Contact for pricing",
-          included: true,
-          tooltip: "Pricing depends on company size and specific requirements",
-        },
+        { name: "Unlimited Gym Access", included: true },
+        { name: "12 Months Membership", included: true },
+        { name: "One-time Payment", included: true },
       ],
-      cta: "Contact Us",
-      ctaLink: "/contact?plan=corporate-bundoran",
+      cta: "Join Now",
+      ctaLink: "/contact?plan=1-year-gym-bundoran",
       location: "bundoran",
     },
     {
-      id: "annual-bundoran",
-      name: "Annual",
-      price: 499,
-      period: "year",
-      description: "Best value for committed members",
+      id: "casual-month-bundoran",
+      name: "1 Month Casual Membership",
+      price: 50,
+      period: "one-time",
+      description: "Flexible one-month access",
       features: [
-        { name: "All Premium features", included: true },
-        { name: "Save over €400 annually", included: true },
-        { name: "Free gym merchandise", included: true },
-        { name: "Priority class booking", included: true },
-        { name: "Exclusive member events", included: true },
-        { name: "Freeze option", included: "Up to 1 month" },
+        { name: "Unlimited Gym Access", included: true },
+        { name: "1 Month Membership", included: true },
+        { name: "One-time Payment", included: true },
       ],
       cta: "Join Now",
-      ctaLink: "/contact?plan=annual-bundoran",
+      ctaLink: "/contact?plan=casual-month-bundoran",
       location: "bundoran",
     },
     {
       id: "day-pass-bundoran",
       name: "Day Pass",
-      price: 15,
-      period: "day",
+      price: 12,
+      period: "one-time",
       description: "Try our gym for a day",
       features: [
-        { name: "Full gym access for one day", included: true },
-        { name: "Access to all facilities", included: true },
-        { name: "Join any class (subject to availability)", included: true },
-        { name: "No commitment required", included: true },
-        { name: "Locker room access", included: true },
+        { name: "Full Gym Access For One Day", included: true },
+        { name: "Access To All Facilities", included: true },
+        { name: "No Commitment Required", included: true },
       ],
       cta: "Get Pass",
       ctaLink: "/contact?plan=day-pass-bundoran",
@@ -219,56 +187,53 @@ export default function MembershipsPage() {
 
     // Killybegs memberships
     {
-      id: "basic-killybegs",
-      name: "Basic",
-      price: 45,
-      period: "month",
-      description: "Essential gym access in Killybegs",
-      features: [
-        { name: "Gym access (6am-10pm)", included: true },
-        { name: "Basic fitness assessment", included: true },
-        { name: "Locker room access", included: true },
-        { name: "Fitness app access", included: true },
-        { name: "Free WiFi", included: true },
-      ],
-      cta: "Sign Up Now",
-      ctaLink: "/contact?plan=basic-killybegs",
-      location: "killybegs",
-    },
-    {
-      id: "premium-killybegs",
-      name: "Premium",
-      price: 69,
-      period: "month",
-      description: "Enhanced experience at our Killybegs location",
-      popular: true,
-      badge: "Most Popular",
-      features: [
-        { name: "24/7 gym access", included: true },
-        { name: "Comprehensive fitness assessment", included: true },
-        { name: "All available classes", included: true },
-        { name: "Nutrition consultation", included: true },
-        { name: "Personalized workout plan", included: true },
-        { name: "Fitness app access", included: true },
-      ],
-      cta: "Join Now",
-      ctaLink: "/contact?plan=premium-killybegs",
-      location: "killybegs",
-    },
-    {
       id: "day-pass-killybegs",
       name: "Day Pass",
       price: 12,
-      period: "day",
-      description: "Try our Killybegs gym for a day",
+      period: "one-time",
+      description: "Try our gym for a day",
       features: [
-        { name: "Full gym access for one day", included: true },
-        { name: "Access to all facilities", included: true },
-        { name: "No commitment required", included: true },
-        { name: "Locker room access", included: true },
+        { name: "Full Gym Access For One Day", included: true },
+        { name: "Access To All Facilities", included: true },
+        { name: "No Commitment Required", included: true },
       ],
       cta: "Get Pass",
       ctaLink: "/contact?plan=day-pass-killybegs",
+      location: "killybegs",
+    },
+    {
+      id: "platinum-killybegs",
+      name: "Platinum Membership",
+      price: 95,
+      period: "month",
+      description: "Complete access to group training and gym facilities",
+      popular: true,
+      badge: "Most Popular",
+      features: [
+        { name: "Unlimited Access To All Group Training", included: true },
+        { name: "Unlimited Access To The Gym", included: true },
+        { name: "1 Free Body Scan Each Month", included: true },
+        { name: "Suitable For All Fitness Levels", included: true },
+        { name: "1 Month Rolling Membership", included: true },
+        { name: "30 Days Notice for Cancellation", included: true },
+      ],
+      cta: "Join Now",
+      ctaLink: "/contact?plan=platinum-killybegs",
+      location: "killybegs",
+    },
+    {
+      id: "1-month-gym-killybegs",
+      name: "1 Month Gym Membership",
+      price: 50,
+      period: "month",
+      description: "Basic gym access with monthly renewal",
+      features: [
+        { name: "Unlimited Gym Access", included: true },
+        { name: "Monthly Rolling Membership", included: true },
+        { name: "30 Days Notice for Cancellation", included: true },
+      ],
+      cta: "Join Now",
+      ctaLink: "/contact?plan=1-month-gym-killybegs",
       location: "killybegs",
     },
   ]
@@ -306,6 +271,36 @@ export default function MembershipsPage() {
     }
   }, [])
 
+  useEffect(() => {
+    // Handle smooth scrolling on the client side only
+    const handleScroll = () => {
+      document.documentElement.style.scrollBehavior = "smooth"
+    }
+
+    // Add the event listener
+    window.addEventListener("scroll", handleScroll)
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
+  const ScrollToTop = () => {
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      })
+    }
+
+    return (
+      <button onClick={scrollToTop}>
+        Scroll to top
+      </button>
+    )
+  }
+
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
@@ -314,7 +309,7 @@ export default function MembershipsPage() {
         badge="Simple Pricing"
         title="Choose your plan"
         subtitle="Affordable memberships for all fitness levels. No hidden fees."
-        backgroundImage="/images/membershipbackgroundimage.png"
+        backgroundImage="/images/backgrounds/membershipbackgroundimage.webp"
       />
 
       {/* Membership Plans */}
@@ -324,9 +319,9 @@ export default function MembershipsPage() {
       >
         <div className="container mx-auto px-4 max-w-6xl">
           <SectionHeading
-            badge="Membership Options"
-            title="Select the Perfect Plan for Your Goals"
-            description="We offer flexible membership options to fit your lifestyle and fitness needs."
+            badge="Let's Talk Pricing"
+            title="Find Your Perfect Plan"
+            description="Join us with a plan that fits your lifestyle - no surprises, just straightforward pricing."
             centered={true}
           />
 
@@ -382,7 +377,7 @@ export default function MembershipsPage() {
                     <div className="mb-6">
                       {typeof plan.price === "number" ? (
                         <>
-                          <span className="text-5xl font-bold">${plan.price}</span>
+                          <span className="text-5xl font-bold">€{plan.price}</span>
                           <span className="text-gray-500">/{plan.period}</span>
                         </>
                       ) : (
@@ -450,9 +445,9 @@ export default function MembershipsPage() {
       >
         <div className="container mx-auto px-4 max-w-3xl">
           <SectionHeading
-            badge="Common Questions"
-            title="Frequently Asked Questions"
-            description="Find answers to the most common questions about our membership plans."
+            badge="Got Questions?"
+            title="We've Got Answers"
+            description="Here are the answers to questions our members ask most often. Still curious? Just reach out!"
             centered={true}
           />
 

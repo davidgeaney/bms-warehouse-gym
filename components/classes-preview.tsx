@@ -133,9 +133,9 @@ export function ClassesPreview() {
     <section className="py-24 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         <SectionHeading
-          badge="Get Moving"
-          title="Featured Classes for Every Level"
-          description="Discover our most popular fitness classes designed to help you achieve your goals."
+          badge="Join the Action"
+          title="Classes You'll Love"
+          description="From high-energy workouts to mindful movement, find the perfect class to match your style."
           centered={true}
         />
 

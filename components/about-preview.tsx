@@ -22,9 +22,9 @@ export function AboutPreview() {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4 max-w-6xl">
         <SectionHeading
-          badge="About Us"
-          title="Your Fitness Journey Starts Here"
-          description="At BMS Warehouse Gym, we are dedicated to helping you unlock your full fitness potential. With top-tier equipment, expert trainers, and a welcoming community, we provide the perfect environment to push your limits and achieve your goals."
+          badge="Get to Know Us"
+          title="Your Journey Starts Here"
+          description="We're more than just equipment and workouts - we're a community that supports and celebrates your progress every step of the way."
           centered={true}
         />
 

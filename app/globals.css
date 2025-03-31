@@ -82,3 +82,12 @@
   scrollbar-width: none;
 }
 
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+.light {
+  color-scheme: light;
+}
+

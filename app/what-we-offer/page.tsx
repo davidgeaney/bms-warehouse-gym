@@ -28,6 +28,13 @@ import {
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { SectionHeading } from "@/components/section-heading"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog"
 
 // Define our offering types
 type OfferingCategory = "services" | "facilities" | "programs"
@@ -47,6 +54,7 @@ export default function WhatWeOfferPage() {
   const [expandedOffering, setExpandedOffering] = useState<string | null>(null)
   const [activeAdvantage, setActiveAdvantage] = useState<number>(0)
   const [isInView, setIsInView] = useState(false)
+  const [selectedOffering, setSelectedOffering] = useState<Offering | null>(null)
 
   const advantagesRef = useRef<HTMLDivElement>(null)
 
@@ -56,52 +64,57 @@ export default function WhatWeOfferPage() {
     {
       id: "personal-training",
       title: "Personal Training",
-      description: "One-on-one coaching tailored to your specific goals and fitness level.",
+      description: "Get a dedicated coach who'll work with you one-on-one to crush your fitness goals. Whether you're just starting out or looking to level up, we've got your back.",
       icon: <Dumbbell className="h-5 w-5" />,
       category: "services",
       highlights: [
-        "Customized workout plans",
-        "Expert guidance on form",
-        "Regular progress tracking",
-        "Nutritional guidance",
+        "Workout plans built just for you",
+        "Expert guidance to perfect your form",
+        "Track your progress every step of the way",
+        "Smart nutrition tips that actually work",
       ],
       image: "/images/featuredservice.png",
     },
     {
       id: "group-classes",
       title: "Group Classes",
-      description: "High-energy workouts in a motivating group environment.",
+      description: "Join the fun! Our high-energy group sessions are where fitness meets friendship. You'll push harder and achieve more with an amazing crew by your side.",
       icon: <Users className="h-5 w-5" />,
       category: "services",
       highlights: [
-        "Variety of class styles",
-        "All fitness levels welcome",
-        "Supportive community",
-        "Expert instructors",
+        "Mix it up with different class styles",
+        "Perfect for all fitness levels",
+        "Make friends who motivate you",
+        "Learn from our passionate instructors",
       ],
       image: "/images/groupclasses.png",
     },
     {
       id: "nutrition-coaching",
       title: "Nutrition Coaching",
-      description: "Expert guidance on nutrition to complement your fitness routine.",
+      description: "Let's make healthy eating simple and enjoyable. Our nutrition experts will help you fuel your workouts and feel amazing, without giving up the foods you love.",
       icon: <Heart className="h-5 w-5" />,
       category: "services",
       highlights: [
-        "Personalized meal plans",
-        "Supplement recommendations",
-        "Habit formation coaching",
-        "Body composition analysis",
+        "Custom meal plans that fit your lifestyle",
+        "Smart supplement advice when you need it",
+        "Build habits that actually stick",
+        "Regular body composition check-ins",
       ],
       image: "/images/nutritioncoaching.jpg",
     },
     {
       id: "wellness-programs",
       title: "Wellness Programs",
-      description: "Comprehensive programs addressing all aspects of health and wellbeing.",
+      description: "Because fitness is more than just working out. We'll help you master stress, sleep better, and feel incredible - inside and out.",
       icon: <Brain className="h-5 w-5" />,
       category: "services",
-      highlights: ["Stress management", "Sleep optimization", "Recovery techniques", "Mental performance"],
+      highlights: [
+        "Beat stress with proven techniques",
+        "Get the quality sleep you deserve",
+        "Recover like a pro athlete",
+        "Boost your mental game",
+      ],
       image: "/images/recoveryarea.png",
     },
 
@@ -109,47 +122,57 @@ export default function WhatWeOfferPage() {
     {
       id: "strength-zone",
       title: "Strength Zone",
-      description: "State-of-the-art strength equipment for all your lifting needs.",
+      description: "Welcome to your playground! Our strength area is packed with top-notch equipment that'll help you build muscle, gain strength, and feel powerful.",
       icon: <Dumbbell className="h-5 w-5" />,
       category: "facilities",
       highlights: [
-        "Free weights area",
-        "Power racks and platforms",
-        "Specialized machines",
-        "Functional training equipment",
+        "Everything you need for free weights",
+        "Power racks that'll make you smile",
+        "Machines for every muscle group",
+        "Functional training tools galore",
       ],
       image: "/images/featuredfacility.png",
     },
     {
       id: "cardio-deck",
       title: "Cardio Deck",
-      description: "Premium cardio machines with integrated entertainment systems.",
+      description: "Make cardio fun again! Our machines come with entertainment systems to keep you engaged while you crush those calories.",
       icon: <Heart className="h-5 w-5" />,
       category: "facilities",
-      highlights: ["Treadmills and ellipticals", "Rowing machines", "Stair climbers", "Assault bikes"],
+      highlights: [
+        "Latest treadmills and ellipticals",
+        "Row your way to fitness",
+        "Climb to new heights",
+        "Challenge yourself on our assault bikes",
+      ],
       image: "/images/cardiodeck.png",
     },
     {
       id: "studio-spaces",
       title: "Studio Spaces",
-      description: "Dedicated spaces for group classes and specialized training.",
+      description: "Find your perfect workout spot! Our versatile studios are ready for everything from high-energy classes to peaceful yoga sessions.",
       icon: <Users className="h-5 w-5" />,
       category: "facilities",
       highlights: [
-        "Multiple class studios",
-        "Yoga and stretching area",
-        "Boxing and martial arts zone",
-        "Cycling studio",
+        "Spacious studios for every class",
+        "Zen zones for yoga and stretching",
+        "Get ready to box and kick",
+        "Spin your way to fitness",
       ],
       image: "/images/studiospaces.png",
     },
     {
       id: "recovery-area",
       title: "Recovery Area",
-      description: "Specialized recovery equipment to help you bounce back faster.",
+      description: "Because rest days are just as important! Treat your body right with our premium recovery tools and spaces.",
       icon: <Zap className="h-5 w-5" />,
       category: "facilities",
-      highlights: ["Foam rolling station", "Massage therapy rooms", "Stretching area", "Cold plunge and sauna"],
+      highlights: [
+        "Roll away the tension",
+        "Treat yourself to a massage",
+        "Stretch it out in comfort",
+        "Rejuvenate in our cold plunge and sauna",
+      ],
       image: "/images/recoveryarea.png",
     },
 
@@ -157,42 +180,57 @@ export default function WhatWeOfferPage() {
     {
       id: "weight-loss",
       title: "Weight Loss",
-      description: "Structured programs to help you achieve sustainable weight loss.",
+      description: "Ready to transform? Our proven approach helps you lose weight and keep it off - no crash diets or crazy workouts required.",
       icon: <Award className="h-5 w-5" />,
       category: "programs",
-      highlights: ["Customized workout plans", "Nutrition guidance", "Progress tracking", "Accountability coaching"],
+      highlights: [
+        "Workouts that work for you",
+        "Real nutrition that makes sense",
+        "See your progress in real-time",
+        "We'll keep you on track",
+      ],
       image: "/images/featuredprogram.jpg",
     },
     {
       id: "strength-building",
       title: "Strength Building",
-      description: "Progressive resistance training to increase muscle and strength.",
+      description: "Whether you want to lift heavier, look better, or feel stronger - we'll help you build muscle the right way.",
       icon: <Trophy className="h-5 w-5" />,
       category: "programs",
       highlights: [
-        "Periodized training plans",
-        "Form technique coaching",
-        "Progressive overload",
-        "Recovery strategies",
+        "Training plans that evolve with you",
+        "Master proper form and technique",
+        "Get stronger every week",
+        "Recover like a champion",
       ],
       image: "/images/featuredfacility.png",
     },
     {
       id: "athletic-performance",
       title: "Athletic Performance",
-      description: "Sport-specific training to enhance overall athletic performance.",
+      description: "Take your game to the next level! Whether you're a weekend warrior or competitive athlete, we'll help you perform at your peak.",
       icon: <Sparkles className="h-5 w-5" />,
       category: "programs",
-      highlights: ["Speed and agility training", "Power development", "Sport-specific drills", "Injury prevention"],
+      highlights: [
+        "Get faster and more agile",
+        "Build explosive power",
+        "Sport-specific training that works",
+        "Stay injury-free and ready to play",
+      ],
       image: "/images/athleticperformance.png",
     },
     {
       id: "senior-fitness",
       title: "Senior Fitness",
-      description: "Specialized programs for older adults focusing on mobility and strength.",
+      description: "Age is just a number! Our senior programs focus on keeping you strong, mobile, and independent - while having fun along the way.",
       icon: <ShieldCheck className="h-5 w-5" />,
       category: "programs",
-      highlights: ["Balance improvement", "Functional strength", "Joint mobility", "Low-impact cardio"],
+      highlights: [
+        "Move with confidence and balance",
+        "Stay strong for daily activities",
+        "Keep your joints happy and healthy",
+        "Heart-healthy cardio you'll enjoy",
+      ],
       image: "/images/groupclasses.png",
     },
   ]
@@ -214,23 +252,22 @@ export default function WhatWeOfferPage() {
     {
       icon: <Clock className="h-6 w-6 text-black" />,
       title: "24/7 Access",
-      description: "Our facilities are open around the clock, giving you the freedom to work out on your schedule.",
+      description: "Work out whenever it suits you! Our doors are always open, because we know life doesn't stick to a 9-5 schedule.",
     },
     {
       icon: <Star className="h-6 w-6 text-black" />,
       title: "Expert Trainers",
-      description: "Our certified trainers bring years of experience and specialized knowledge to every session.",
+      description: "Train with the best! Our certified coaches bring years of experience and a passion for helping you succeed.",
     },
     {
       icon: <Sparkles className="h-6 w-6 text-black" />,
       title: "Premium Equipment",
-      description:
-        "We invest in the best equipment to ensure you have access to top-quality tools for your fitness journey.",
+      description: "We've invested in the best gear out there, so you can focus on what matters - getting results and having fun doing it.",
     },
     {
       icon: <Users className="h-6 w-6 text-black" />,
       title: "Community Focus",
-      description: "We foster a supportive community where members encourage each other to reach their goals.",
+      description: "Join a family that celebrates your wins! Our members support each other, making every workout more enjoyable and motivating.",
     },
   ]
 
@@ -239,8 +276,7 @@ export default function WhatWeOfferPage() {
     {
       id: "performance",
       title: "Performance Tracking",
-      description:
-        "Our smart gym technology tracks your workouts and progress in real-time, providing insights to optimize your training.",
+      description: "See your progress in real-time! Our smart tech keeps tabs on your workouts, showing you exactly how you're improving and what to do next.",
       icon: <Gauge className="h-6 w-6" />,
       stats: [
         { label: "Workout Efficiency", value: 94, unit: "%" },
@@ -248,16 +284,15 @@ export default function WhatWeOfferPage() {
         { label: "Goal Achievement", value: 87, unit: "%" },
       ],
       comparison: {
-        bms: "Advanced AI-powered tracking",
-        others: "Basic or no tracking",
+        bms: "Smart tracking that actually helps you improve",
+        others: "Basic or no tracking at all",
       },
       image: "/placeholder.svg?height=600&width=800",
     },
     {
       id: "equipment",
       title: "Next-Gen Equipment",
-      description:
-        "Experience the latest in fitness technology with our premium equipment that's regularly updated and maintained.",
+      description: "Train with the best! Our gear is always top-notch and regularly updated, so you get the most out of every workout.",
       icon: <Dumbbell className="h-6 w-6" />,
       stats: [
         { label: "Equipment Quality", value: 98, unit: "%" },
@@ -265,16 +300,15 @@ export default function WhatWeOfferPage() {
         { label: "Variety", value: 92, unit: "%" },
       ],
       comparison: {
-        bms: "Latest premium equipment",
-        others: "Outdated or limited options",
+        bms: "The latest and greatest in fitness tech",
+        others: "Old equipment that holds you back",
       },
       image: "/placeholder.svg?height=600&width=800",
     },
     {
       id: "community",
       title: "Connected Community",
-      description:
-        "Join a thriving fitness community that supports and motivates you through our digital and in-person networks.",
+      description: "Join a fitness family that gets it! Connect with like-minded people who'll cheer you on, both in the gym and online.",
       icon: <Users className="h-6 w-6" />,
       stats: [
         { label: "Member Satisfaction", value: 96, unit: "%" },
@@ -282,16 +316,15 @@ export default function WhatWeOfferPage() {
         { label: "Support Rating", value: 4.9, unit: "/5" },
       ],
       comparison: {
-        bms: "Vibrant, supportive community",
-        others: "Impersonal environment",
+        bms: "A real community that feels like family",
+        others: "Just another anonymous gym",
       },
       image: "/placeholder.svg?height=600&width=800",
     },
     {
       id: "results",
       title: "Guaranteed Results",
-      description:
-        "Our scientifically-backed approach ensures you'll see measurable results faster than with traditional gyms.",
+      description: "We don't just promise results - we deliver them! Our proven approach helps you reach your goals faster than traditional gyms.",
       icon: <Target className="h-6 w-6" />,
       stats: [
         { label: "Goal Achievement", value: 89, unit: "%" },
@@ -299,8 +332,8 @@ export default function WhatWeOfferPage() {
         { label: "Satisfaction Rate", value: 97, unit: "%" },
       ],
       comparison: {
-        bms: "Data-driven results guarantee",
-        others: "No guarantees or accountability",
+        bms: "Real results backed by real data",
+        others: "No guarantees, just guesswork",
       },
       image: "/placeholder.svg?height=600&width=800",
     },
@@ -337,24 +370,29 @@ export default function WhatWeOfferPage() {
     }
   }, [])
 
+  // Function to handle dialog open/close
+  const handleLearnMore = (offering: Offering) => {
+    setSelectedOffering(offering)
+  }
+
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
 
       <PageHero
-        badge="Our Offerings"
-        title="What We Offer"
-        subtitle="Discover our comprehensive range of fitness services designed to help you achieve your health and wellness goals."
-        backgroundImage="/images/whatweofferbackgroundimage.png"
+        badge="What We Offer"
+        title="Everything You Need to Succeed"
+        subtitle="From state-of-the-art equipment to expert guidance, we've got all the tools to help you crush your fitness goals."
+        backgroundImage="/images/backgrounds/whatweofferbackgroundimage.webp"
       />
 
       {/* What Makes Us Different Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <SectionHeading
-            badge="Why Choose Us"
-            title="What Makes Us Different"
-            description="At BMS Warehouse Gym, we stand out from the competition with our unique approach to fitness and wellness."
+            badge="Why We're Different"
+            title="What Sets Us Apart"
+            description="There's something special about BMS Warehouse Gym. Here's what makes us your perfect fitness partner."
             centered={true}
           />
 
@@ -387,9 +425,9 @@ export default function WhatWeOfferPage() {
       <section className="py-24 bg-white overflow-hidden">
         <div className="container mx-auto px-4">
           <SectionHeading
-            badge="Explore Our Offerings"
-            title="Everything You Need For Your Fitness Journey"
-            description="Browse through our comprehensive range of services, facilities, and programs."
+            badge="Our Services"
+            title="Everything You Need to Succeed"
+            description="From personal training to group classes, we've got all the tools to help you crush your fitness goals."
             centered={true}
           />
 
@@ -541,11 +579,14 @@ export default function WhatWeOfferPage() {
 
                         <p className="text-gray-600 text-sm mb-4 line-clamp-2">{offering.description}</p>
 
-                        <Link href={`/contact?service=${offering.id}`}>
-                          <Button variant="outline" size="sm" className="w-full border-gray-200">
-                            Learn More
-                          </Button>
-                        </Link>
+                        <Button 
+                          variant="outline" 
+                          size="sm" 
+                          className="w-full border-gray-200"
+                          onClick={() => handleLearnMore(offering)}
+                        >
+                          Learn More
+                        </Button>
                       </div>
                     </div>
                   ))}
@@ -747,9 +788,9 @@ export default function WhatWeOfferPage() {
       <section className="py-24 bg-gray-50" ref={advantagesRef}>
         <div className="container mx-auto px-4">
           <SectionHeading
-            badge="The BMS Advantage"
-            title="Advanced Fitness Technology"
-            description="Experience the future of fitness with our innovative technology and data-driven approach."
+            badge="Next-Level Training"
+            title="Train Smarter, Not Just Harder"
+            description="Get access to cutting-edge fitness tech that helps you track progress and maximize results."
             centered={true}
           />
 
@@ -896,6 +937,61 @@ export default function WhatWeOfferPage() {
           </div>
         </div>
       </section>
+
+      {/* Dialog for offering details */}
+      <Dialog open={selectedOffering !== null} onOpenChange={() => setSelectedOffering(null)}>
+        <DialogContent className="sm:max-w-[600px]">
+          {selectedOffering && (
+            <>
+              <DialogHeader>
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-10 h-10 rounded-lg bg-pink-500/10 flex items-center justify-center flex-shrink-0">
+                    {selectedOffering.icon}
+                  </div>
+                  <DialogTitle className="text-2xl font-bold">{selectedOffering.title}</DialogTitle>
+                </div>
+                <DialogDescription className="text-base text-gray-600">
+                  {selectedOffering.description}
+                </DialogDescription>
+              </DialogHeader>
+
+              <div className="relative mt-4">
+                <div className="aspect-video relative rounded-lg overflow-hidden mb-6">
+                  <Image
+                    src={selectedOffering.image || "/placeholder.svg?height=300&width=600"}
+                    alt={selectedOffering.title}
+                    fill
+                    className="object-cover"
+                    sizes="600px"
+                  />
+                </div>
+
+                <div className="space-y-4">
+                  <h4 className="font-semibold text-lg">Key Features:</h4>
+                  <div className="grid gap-3">
+                    {selectedOffering.highlights.map((highlight, index) => (
+                      <div key={index} className="flex items-start gap-3">
+                        <div className="w-6 h-6 rounded-full bg-pink-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Check className="h-3 w-3 text-pink-500" />
+                        </div>
+                        <span className="text-gray-600">{highlight}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mt-8">
+                  <Link href="/contact">
+                    <Button className="w-full bg-pink-500 hover:bg-pink-600 text-white">
+                      Get Started
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
 
       <Footer />
     </div>

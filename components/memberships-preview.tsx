@@ -30,17 +30,34 @@ export function MembershipsPreview() {
     {
       id: "day-pass-bundoran",
       name: "Day Pass",
-      price: 15,
+      price: 12,
       period: "day",
       description: "Try our gym for a day",
       features: [
         "Full gym access for one day",
         "Access to all facilities",
-        "Join any class (subject to availability)",
         "No commitment required",
       ],
       cta: "Get Pass",
       ctaLink: "/contact?plan=day-pass-bundoran",
+      location: "bundoran",
+    },
+    {
+      id: "platinum-bundoran",
+      name: "Platinum Membership",
+      price: 95,
+      period: "month",
+      description: "Complete access to group training and gym facilities",
+      features: [
+        "Unlimited Access To All Group Training",
+        "Unlimited Access To The Gym",
+        "1 Free Body Scan Each Month",
+        "Suitable For All Fitness Levels",
+        "1 Month Rolling Membership",
+        "30 Days Notice for Cancellation",
+      ],
+      cta: "Join Now",
+      ctaLink: "/contact?plan=platinum-bundoran",
       location: "bundoran",
     },
     {
@@ -264,9 +281,9 @@ export function MembershipsPreview() {
     <section className="py-24 bg-gray-50">
       <div className="container mx-auto px-4">
         <SectionHeading
-          badge="Simple Pricing"
-          title="Choose your plan"
-          description="Affordable memberships for all fitness levels. No hidden fees."
+          badge="Join Us"
+          title="Pick Your Path"
+          description="Whether you're just starting out or going all in, we've got a plan that's right for you."
           centered={true}
         />
 

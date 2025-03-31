@@ -126,9 +126,9 @@ export function TestimonialsSection() {
     <section className="py-24 bg-gray-50">
       <div className="container mx-auto px-4">
         <SectionHeading
-          badge="Success Stories"
-          title="The Results We're Achieving"
-          description="Real experiences from real people who have transformed their lives at BMS Warehouse Gym."
+          badge="Real Stories"
+          title="Hear From Our Members"
+          description="These are real people sharing their journey with us. Their success could be your story too!"
           centered={true}
         />
 

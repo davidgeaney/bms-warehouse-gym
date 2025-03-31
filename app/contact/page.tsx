@@ -54,9 +54,9 @@ export default function ContactPage() {
 
       <PageHero
         badge="Get in Touch"
-        title="Contact Us"
-        subtitle="Have questions or want to learn more about our gym? Reach out to us and our team will get back to you as soon as possible."
-        backgroundImage="/images/contactbackgroundimage.png"
+        title="Let's Start Your Journey"
+        subtitle="Have questions? Ready to join? We're here to help you get started on your fitness journey."
+        backgroundImage="/images/backgrounds/contactbackgroundimage.webp"
       />
 
       {/* Contact Form & Info Section */}
@@ -186,11 +186,11 @@ export default function ContactPage() {
                     <div>
                       <h4 className="font-medium mb-1">Our Location</h4>
                       <address className="not-italic text-gray-600">
-                        123 Fitness Street
+                        Unit 2, Bundoran Retail Park
                         <br />
-                        Warehouse District
+                        Drumacrin, Bundoran
                         <br />
-                        City, State 12345
+                        Co. Donegal, F94 P230
                       </address>
                     </div>
                   </div>
@@ -202,8 +202,8 @@ export default function ContactPage() {
                     <div>
                       <h4 className="font-medium mb-1">Phone Number</h4>
                       <p className="text-gray-600">
-                        <a href="tel:+11234567890" className="hover:text-pink-500 transition-colors">
-                          (123) 456-7890
+                        <a href="tel:+353873999934" className="hover:text-pink-500 transition-colors">
+                          +353 87 399 9934
                         </a>
                       </p>
                     </div>
@@ -216,8 +216,8 @@ export default function ContactPage() {
                     <div>
                       <h4 className="font-medium mb-1">Email Address</h4>
                       <p className="text-gray-600">
-                        <a href="mailto:info@bmswarehousegym.com" className="hover:text-pink-500 transition-colors">
-                          info@bmswarehousegym.com
+                        <a href="mailto:info@bmswarehousegym.ie" className="hover:text-pink-500 transition-colors">
+                          info@bmswarehousegym.ie
                         </a>
                       </p>
                     </div>
@@ -228,19 +228,19 @@ export default function ContactPage() {
                       <Clock className="h-5 w-5 text-black" />
                     </div>
                     <div>
-                      <h4 className="font-medium mb-1">Opening Hours</h4>
-                      <div className="space-y-1 text-gray-600">
-                        <div className="flex justify-between">
-                          <span>Monday - Friday</span>
-                          <span>5:00 AM - 11:00 PM</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span>Saturday</span>
+                      <h4 className="font-medium mb-2">Opening Hours</h4>
+                      <div className="grid gap-2 text-gray-600">
+                        <div className="grid grid-cols-[140px,1fr] items-center">
+                          <span className="font-medium">Monday - Friday</span>
                           <span>6:00 AM - 10:00 PM</span>
                         </div>
-                        <div className="flex justify-between">
-                          <span>Sunday</span>
-                          <span>7:00 AM - 9:00 PM</span>
+                        <div className="grid grid-cols-[140px,1fr] items-center">
+                          <span className="font-medium">Saturday</span>
+                          <span>8:00 AM - 8:00 PM</span>
+                        </div>
+                        <div className="grid grid-cols-[140px,1fr] items-center">
+                          <span className="font-medium">Sunday</span>
+                          <span>Closed</span>
                         </div>
                       </div>
                     </div>
@@ -278,48 +278,17 @@ export default function ContactPage() {
           <div className="max-w-6xl mx-auto">
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 mb-8">
               <h2 className="text-2xl font-bold mb-6">Find Our Gym</h2>
-              <div className="aspect-video w-full bg-gray-200 rounded-lg overflow-hidden">
-                {/* This would be replaced with an actual map component */}
-                <div className="w-full h-full flex items-center justify-center">
-                  <p className="text-gray-500">Interactive Map Would Go Here</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Locations */}
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white p-6 rounded-xl border border-gray-100transition-all duration-300">
-                <h3 className="text-xl font-bold mb-4">Main Location</h3>
-                <address className="not-italic text-gray-600 mb-4">
-                  123 Fitness Street
-                  <br />
-                  Warehouse District
-                  <br />
-                  City, State 12345
-                </address>
-                <p className="text-sm text-gray-500 mb-4">
-                  Our flagship location with full amenities, including pool and sauna.
-                </p>
-                <Button className="bg-pink-500 hover:bg-pink-600 text-white font-medium w-full group">
-                  Get Directions
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </Button>
-              </div>
-
-              <div className="bg-white p-6 rounded-xl border border-gray-100 transition-all duration-300">
-                <h3 className="text-xl font-bold mb-4">Downtown Branch</h3>
-                <address className="not-italic text-gray-600 mb-4">
-                  456 Central Avenue
-                  <br />
-                  Downtown
-                  <br />
-                  City, State 12345
-                </address>
-                <p className="text-sm text-gray-500 mb-4">Convenient downtown location with 24/7 access for members.</p>
-                <Button className="bg-pink-500 hover:bg-pink-600 text-white font-medium w-full group">
-                  Get Directions
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </Button>
+              <div className="aspect-video w-full rounded-lg overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d204.90203094016778!2d-8.274152725262287!3d54.47702039644738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485efd841122521d%3A0x960bbbb7d6509059!2sBMS%20Warehouse%20Gym!5e0!3m2!1sen!2sie!4v1743432825896!5m2!1sen!2sie"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full"
+                />
               </div>
             </div>
           </div>

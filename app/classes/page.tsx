@@ -402,10 +402,10 @@ export default function ClassesPage() {
       <Navbar />
 
       <PageHero
-        badge="Our Classes"
-        title="Find Your Perfect Fitness Class"
-        subtitle="Discover our diverse range of fitness classes designed to help you achieve your goals. From high-intensity workouts to mindful movement, we have something for everyone."
-        backgroundImage="/images/classesbackgroundimage.png"
+        badge="Get Moving"
+        title="Find Your Perfect Class"
+        subtitle="From high-energy workouts to mindful movement, we've got something for everyone. Join a class that fits your style and goals."
+        backgroundImage="/images/backgrounds/classesbackgroundimage.webp"
       />
 
       {/* Featured Class Section */}
@@ -413,8 +413,8 @@ export default function ClassesPage() {
         <div className="container mx-auto px-4">
           <SectionHeading
             badge="Featured Class"
-            title="Experience the FX Training Difference"
-            description="Our flagship Functional Fitness Class suitable for all abilities. Join our exclusive group training program designed to prepare you for Functional Fitness races like Hyrox, BUA, and Dekafit."
+            title="Get Ready for FX Training"
+            description="Join our signature class that's changing the game. Perfect for all levels, this class will prep you for competitions like Hyrox, BUA, and Dekafit while having a blast!"
             centered={true}
           />
 
@@ -425,10 +425,11 @@ export default function ClassesPage() {
             <div className="relative h-96 rounded-xl overflow-hidden">
               <Image
                 src="/images/fxtraining.png"
-                alt="FX Training Class"
+                alt="FX Training"
                 fill
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j..."
                 className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-8">
                 <div className="flex items-center gap-2 mb-2">

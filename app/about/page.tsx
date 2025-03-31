@@ -116,35 +116,35 @@ export default function AboutPage() {
       year: "2018",
       title: "The Beginning",
       description:
-        "BMS Warehouse Gym was founded in a small converted warehouse with just a few pieces of equipment and a vision to create a different kind of fitness experience.",
+        "What started as a small warehouse with basic equipment has grown into something special. We had a vision to create a different kind of fitness experience - one that focused on community and real results.",
       image: "/images/thebeginning.png",
     },
     {
       year: "2019",
       title: "Growing Community",
       description:
-        "As our community grew, we expanded our facility and added specialized training programs to meet the diverse needs of our members.",
+        "Word spread quickly about our unique approach. We expanded our facility and added specialized training programs to meet the diverse needs of our growing community.",
       image: "/images/growingcommunity.png",
     },
     {
       year: "2020",
       title: "Adapting & Innovating",
       description:
-        "During challenging times, we innovated with virtual training options and outdoor classes, strengthening our community bonds even when physically apart.",
+        "When the world changed, we adapted. We introduced virtual training options and outdoor classes, finding new ways to keep our community strong and motivated.",
       image: "/images/adaptingandinnovating.png",
     },
     {
       year: "2022",
-      title: "Continued Growth",
+      title: "New Heights",
       description:
-        "During challenging times, we innovated with virtual training options and outdoor classes, strengthening our community bonds even when physically apart.",
+        "Our community reached new heights as we introduced more specialized programs and expanded our training team. The energy in our gym was electric!",
       image: "/images/continuedgrowth.png",
     },
     {
       year: "2025",
       title: "Expansion",
       description:
-        "We opened our second location, bringing our unique approach to fitness to even more people in the community.",
+        "We're excited to announce our second location, bringing our unique approach to fitness to even more people in the community. The journey continues!",
       image: "/images/comingsoon.jpg",
     },
   ]
@@ -154,10 +154,10 @@ export default function AboutPage() {
       <Navbar />
 
       <PageHero
-        badge="About Us"
-        title="Our Story and Mission"
-        subtitle="We're more than just a gym. We're a community dedicated to helping you achieve your fitness goals and transform your life."
-        backgroundImage="/images/aboutbackgroundimage.png"
+        badge="Our Story"
+        title="More Than Just a Gym"
+        subtitle="We're a community of fitness enthusiasts, dedicated to helping you reach your goals and transform your life."
+        backgroundImage="/images/backgrounds/aboutbackgroundimage.webp"
       />
 
       {/* Tab Navigation */}
@@ -224,9 +224,9 @@ export default function AboutPage() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 max-w-6xl">
             <SectionHeading
-              badge="Our Mission"
-              title="Empowering Your Fitness Journey"
-              description="At BMS Warehouse Gym, our mission is to create an inclusive, supportive environment where individuals of all fitness levels can achieve their personal health and wellness goals."
+              badge="Why We're Here"
+              title="More Than Just a Gym"
+              description="We're building a community where everyone can thrive, grow stronger, and achieve their personal best."
               centered={true}
             />
 
@@ -302,9 +302,9 @@ export default function AboutPage() {
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4 max-w-6xl">
             <SectionHeading
-              badge="What Drives Us"
-              title="Our Core Values"
-              description="These principles guide everything we do at BMS Warehouse Gym, from how we design our facilities to how we interact with our members."
+              badge="Our Heart & Soul"
+              title="What We Stand For"
+              description="These are the values that drive everything we do - from how we train to how we support our members."
               centered={true}
             />
 
@@ -360,9 +360,9 @@ export default function AboutPage() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 max-w-6xl">
             <SectionHeading
-              badge="Our Journey"
-              title="The BMS Warehouse Story"
-              description="From humble beginnings to a fitness revolution, our journey has been defined by passion, perseverance, and a commitment to excellence."
+              badge="Our Story"
+              title="From Dream to Reality"
+              description="See how we've grown from a small warehouse to becoming your trusted fitness partner."
               centered={true}
             />
 
@@ -418,9 +418,9 @@ export default function AboutPage() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 max-w-6xl">
             <SectionHeading
-              badge="The Experts"
-              title="Meet Our Team"
-              description="Our team of certified fitness professionals is dedicated to helping you achieve your goals."
+              badge="Meet the Family"
+              title="The Team Behind Your Success"
+              description="Get to know the passionate professionals dedicated to helping you reach your goals."
               centered={true}
             />
 
@@ -525,9 +525,9 @@ export default function AboutPage() {
           <section className="py-16 bg-white">
             <div className="container mx-auto px-4 max-w-6xl">
               <SectionHeading
-                badge="Our Mission"
-                title="Empowering Your Fitness Journey"
-                description="At BMS Warehouse Gym, our mission is to create an inclusive, supportive environment where individuals of all fitness levels can achieve their personal health and wellness goals."
+                badge="Why We're Here"
+                title="More Than Just a Gym"
+                description="We're building a community where everyone can thrive, grow stronger, and achieve their personal best."
                 centered={true}
               />
 
@@ -605,9 +605,9 @@ export default function AboutPage() {
           <section className="py-16 bg-gray-50">
             <div className="container mx-auto px-4 max-w-6xl">
               <SectionHeading
-                badge="What Drives Us"
-                title="Our Core Values"
-                description="These principles guide everything we do at BMS Warehouse Gym, from how we design our facilities to how we interact with our members."
+                badge="Our Heart & Soul"
+                title="What We Stand For"
+                description="These are the values that drive everything we do - from how we train to how we support our members."
                 centered={true}
               />
 
@@ -666,9 +666,9 @@ export default function AboutPage() {
           <section className="py-16 bg-white">
             <div className="container mx-auto px-4 max-w-6xl">
               <SectionHeading
-                badge="Our Journey"
-                title="The BMS Warehouse Story"
-                description="From humble beginnings to a fitness revolution, our journey has been defined by passion, perseverance, and a commitment to excellence."
+                badge="Our Story"
+                title="From Dream to Reality"
+                description="See how we've grown from a small warehouse to becoming your trusted fitness partner."
                 centered={true}
               />
 
@@ -729,9 +729,9 @@ export default function AboutPage() {
           <section className="py-16 bg-white">
             <div className="container mx-auto px-4 max-w-6xl">
               <SectionHeading
-                badge="The Experts"
-                title="Meet Our Team"
-                description="Our team of certified fitness professionals is dedicated to helping you achieve your goals."
+                badge="Meet the Family"
+                title="The Team Behind Your Success"
+                description="Get to know the passionate professionals dedicated to helping you reach your goals."
                 centered={true}
               />
 
