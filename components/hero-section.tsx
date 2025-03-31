@@ -1,16 +1,15 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ChevronRight, ArrowRight, X, Play } from "lucide-react"
+import { ChevronRight, ArrowRight } from "lucide-react"
 import Link from "next/link"
 
 export function HeroSection() {
   const headingRef = useRef<HTMLHeadingElement>(null)
   const textRef = useRef<HTMLParagraphElement>(null)
   const ctaRef = useRef<HTMLDivElement>(null)
-  const [showTourModal, setShowTourModal] = useState(false)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -84,13 +83,12 @@ export function HeroSection() {
                 <ChevronRight className="h-4 w-4" />
               </Button>
             </Link>
-            <button
-              onClick={() => setShowTourModal(true)}
-              className="w-full md:w-auto bg-white/5 hover:bg-white/10 rounded-full px-4 md:px-8 lg:px-10 py-3 md:py-5 lg:py-6 transition-all duration-300 flex items-center justify-center gap-2 group"
-            >
-              <span className="font-medium text-sm md:text-base text-white group-hover:text-pink-500 duration-300">Join Today</span>
-              <ArrowRight className="h-4 w-4 text-white group-hover:text-pink-500" />
-            </button>
+            <Link href="/memberships" className="w-full md:w-auto">
+              <button className="w-full bg-white/5 hover:bg-white/10 rounded-full px-4 md:px-8 lg:px-10 py-3 md:py-5 lg:py-6 transition-all duration-300 flex items-center justify-center gap-2 group">
+                <span className="font-medium text-sm md:text-base text-white group-hover:text-pink-500 duration-300">Join Today</span>
+                <ArrowRight className="h-4 w-4 text-white group-hover:text-pink-500" />
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -105,30 +103,6 @@ export function HeroSection() {
           <div className="w-0.5 h-6 md:h-10 bg-white/50 animate-pulse"></div>
         </div>
       </div>
-
-      {/* 360 Tour Modal */}
-      {showTourModal && (
-        <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
-          <div className="relative max-w-6xl w-full">
-            {/* Close button */}
-            <button
-              onClick={() => setShowTourModal(false)}
-              className="absolute -top-12 right-0 z-10 bg-white/80 backdrop-blur-sm p-2 rounded-full hover:bg-orange-500 hover:text-white transition-colors"
-            >
-              <X className="h-6 w-6" />
-            </button>
-
-            {/* Video container */}
-            <div className="aspect-video w-full bg-gray-900 rounded-xl overflow-hidden relative">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <button className="w-20 h-20 bg-orange-500/90 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors">
-                  <Play className="h-10 w-10 text-white fill-white" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   )
 }

@@ -31,28 +31,28 @@ export function AboutPreview() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="flex items-end gap-1">
-              <span className="text-3xl md:text-4xl font-bold">12</span>
+              <span className="text-3xl md:text-4xl font-bold">5</span>
               <span className="text-orange-500 text-xl font-bold">+</span>
             </div>
             <p className="text-zinc-600 text-sm">Years of Excellence</p>
           </div>
           <div>
             <div className="flex items-end gap-1">
-              <span className="text-3xl md:text-4xl font-bold">5K</span>
+              <span className="text-3xl md:text-4xl font-bold">100</span>
               <span className="text-pink-500 text-xl font-bold">+</span>
             </div>
             <p className="text-zinc-600 text-sm">Members</p>
           </div>
           <div>
             <div className="flex items-end gap-1">
-              <span className="text-3xl md:text-4xl font-bold">30</span>
+              <span className="text-3xl md:text-4xl font-bold">10</span>
               <span className="text-blue-500 text-xl font-bold">+</span>
             </div>
             <p className="text-zinc-600 text-sm">Weekly Classes</p>
           </div>
           <div>
             <div className="flex items-end gap-1">
-              <span className="text-3xl md:text-4xl font-bold">15</span>
+              <span className="text-3xl md:text-4xl font-bold">4</span>
               <span className="text-orange-500 text-xl font-bold">+</span>
             </div>
             <p className="text-zinc-600 text-sm">Expert Trainers</p>

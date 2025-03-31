@@ -237,8 +237,8 @@ export default function AboutPage() {
                   <div className="relative aspect-video">
                     <iframe
                       src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fbmswarehousegym.ie%2Fvideos%2F1208825770023707%2F&show_text=false&width=560&t=0"
-                      width="560"
-                      height="314"
+                      width="100%"
+                      height="100%"
                       style={{ border: "none", overflow: "hidden" }}
                       scrolling="no"
                       frameBorder="0"
@@ -389,28 +389,6 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
-
-            {/* Stats Section */}
-            <div className="mt-16 bg-pink-500 rounded-xl p-8">
-              <div className="grid grid-cols-2 gap-8 text-center">
-                <div>
-                  <div className="text-5xl font-bold text-white mb-2">2</div>
-                  <p className="text-white/80 font-medium">Locations</p>
-                </div>
-                <div>
-                  <div className="text-5xl font-bold text-white mb-2">15+</div>
-                  <p className="text-white/80 font-medium">Expert Trainers</p>
-                </div>
-                <div>
-                  <div className="text-5xl font-bold text-white mb-2">5,000+</div>
-                  <p className="text-white/80 font-medium">Happy Members</p>
-                </div>
-                <div>
-                  <div className="text-5xl font-bold text-white mb-2">30+</div>
-                  <p className="text-white/80 font-medium">Weekly Classes</p>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -538,8 +516,8 @@ export default function AboutPage() {
                     <div className="relative aspect-video">
                       <iframe
                         src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fbmswarehousegym.ie%2Fvideos%2F1208825770023707%2F&show_text=false&width=560&t=0"
-                        width="560"
-                        height="314"
+                        width="100%"
+                        height="100%"
                         style={{ border: "none", overflow: "hidden" }}
                         scrolling="no"
                         frameBorder="0"
