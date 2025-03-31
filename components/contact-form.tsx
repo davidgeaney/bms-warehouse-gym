@@ -23,6 +23,7 @@ export function ContactForm() {
     setIsSuccess(false)
 
     try {
+      console.log('Submitting form data:', formData)
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -31,7 +32,9 @@ export function ContactForm() {
         body: JSON.stringify(formData),
       })
 
+      console.log('Response status:', response.status)
       const data = await response.json()
+      console.log('Response data:', data)
 
       if (!response.ok) {
         throw new Error(data.error || "Failed to send message")
@@ -44,27 +47,23 @@ export function ContactForm() {
         message: "",
       })
 
-      // Show success state
+      // Show success state and message
       setIsSuccess(true)
-
-      // Show success message
       toast({
         title: "Message Sent!",
         description: "Thank you for your message. We'll get back to you soon.",
         variant: "default",
       })
-
-      // Reset success state after 5 seconds
-      setTimeout(() => {
-        setIsSuccess(false)
-      }, 5000)
     } catch (error) {
+      console.error('Form submission error:', error)
       // Show error message
       toast({
         title: "Error",
         description: error instanceof Error ? error.message : "Failed to send message",
         variant: "destructive",
       })
+      // Reset success state in case of error
+      setIsSuccess(false)
     } finally {
       setIsLoading(false)
     }
@@ -82,20 +81,24 @@ export function ContactForm() {
 
   if (isSuccess) {
     return (
-      <div className="flex flex-col items-center justify-center py-12 text-center space-y-4">
-        <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-2">
-          <CheckCircle2 className="h-8 w-8 text-green-600" />
+      <div className="w-full min-h-[300px] flex flex-col items-center justify-center py-6 md:py-12 text-center px-4">
+        <div className="w-16 h-16 md:w-20 md:h-20 bg-green-100 rounded-full flex items-center justify-center mb-4 animate-fade-in-scale">
+          <CheckCircle2 className="h-8 w-8 md:h-10 md:w-10 text-green-600" />
         </div>
-        <h3 className="text-2xl font-bold text-gray-900">Message Sent!</h3>
-        <p className="text-gray-600 max-w-sm">
-          Thank you for reaching out. We'll get back to you as soon as possible.
-        </p>
-        <Button
-          onClick={() => setIsSuccess(false)}
-          className="mt-6 bg-orange-500 hover:bg-orange-600 text-white"
-        >
-          Send Another Message
-        </Button>
+        <div className="space-y-3 w-full max-w-sm mx-auto">
+          <h3 className="text-lg md:text-2xl font-bold text-gray-900">Message Sent Successfully!</h3>
+          <p className="text-gray-600 text-sm md:text-base px-2">
+            Thank you for reaching out. We'll get back to you as soon as possible.
+          </p>
+          <div className="pt-4">
+            <Button
+              onClick={() => setIsSuccess(false)}
+              className="bg-orange-500 hover:bg-orange-600 text-white px-4 md:px-6 py-2 text-sm md:text-base transition-all duration-300 hover:scale-105"
+            >
+              Send Another Message
+            </Button>
+          </div>
+        </div>
       </div>
     )
   }
@@ -164,15 +167,15 @@ export function ContactForm() {
         {isLoading ? (
           <>
             <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-            Sending...
+            <span className="text-sm md:text-base">Sending...</span>
           </>
         ) : (
           <>
             <Send className="mr-2 h-4 w-4" />
-            Send Message
+            <span className="text-sm md:text-base">Send Message</span>
           </>
         )}
       </Button>
     </form>
   )
-} 
+}
