@@ -47,7 +47,7 @@ export default function ClassesPage() {
       description: "Our flagship Functional Fitness Class suitable for all abilities. Join our exclusive group training program designed to prepare you for Functional Fitness races like Hyrox, BUA, and Dekafit.",
       duration: "60 min",
       intensity: "Medium",
-      trainer: "BMS Team",
+      trainer: "Patrick Gill",
       image: "/images/fxtraining.png",
       category: "Strength",
       schedule: [
@@ -63,7 +63,7 @@ export default function ClassesPage() {
       description: "Trainer's Choice. Get a full body surprise written by our expert coaches. Suitable for all fitness levels.",
       duration: "45 min",
       intensity: "Medium",
-      trainer: "BMS Coaches",
+      trainer: "Patrick Gill",
       image: "/images/workoutoftheday.png",
       category: "HIIT",
       schedule: [
@@ -78,7 +78,7 @@ export default function ClassesPage() {
       description: "A 45-minute group exercise workout focusing on legs, glutes, and stomach areas. Suitable for all fitness levels.",
       duration: "45 min",
       intensity: "Medium",
-      trainer: "BMS Team",
+      trainer: "Eiméar McGrory",
       image: "/images/legsbumstums.png",
       category: "Strength",
       schedule: [
@@ -93,7 +93,7 @@ export default function ClassesPage() {
       description: "A barbell group session designed to work every major muscle group. This strength-developing workout uses barbells and plates for exercises such as squats, presses, lifts, and curls.",
       duration: "30 min",
       intensity: "High",
-      trainer: "BMS Team",
+      trainer: "Liam Hegarty",
       image: "/images/PUMP.png",
       category: "Strength",
       schedule: [
@@ -109,7 +109,7 @@ export default function ClassesPage() {
         "Are you ready to take charge of your cardiovascular health and embark on a fitness journey that revitalizes your heart? Join us for CardioRevive, a dynamic and empowering fitness class designed to elevate your cardiovascular fitness, enhance endurance, and strengthen your heart muscles.",
       duration: "30 min",
       intensity: "High",
-      trainer: "Chris Taylor",
+      trainer: "Liam Hegarty",
       image: "/images/cardiorevive.png",
       category: "HIIT",
       schedule: [
@@ -131,8 +131,8 @@ export default function ClassesPage() {
         "Build strength and power with our comprehensive powerlifting program. Focus on the big three: squat, bench press, and deadlift under expert guidance.",
       duration: "60 min",
       intensity: "High",
-      trainer: "Mike Johnson",
-      image: "/placeholder.svg?height=400&width=600",
+      trainer: "Patrick Gill",
+      image: "/images/comingsoon.jpg",
       category: "Strength",
       schedule: [
         { day: "Monday", time: "6:00 AM" },
@@ -153,8 +153,8 @@ export default function ClassesPage() {
         "High-Intensity Interval Training that combines strength and cardio exercises in a circuit format. Maximize calorie burn and improve conditioning.",
       duration: "45 min",
       intensity: "High",
-      trainer: "Sarah Williams",
-      image: "/placeholder.svg?height=400&width=600",
+      trainer: "Liam Hegarty",
+      image: "/images/comingsoon.jpg",
       category: "HIIT",
       schedule: [
         { day: "Tuesday", time: "5:30 PM" },
@@ -175,8 +175,8 @@ export default function ClassesPage() {
         "Connect movement with breath in this dynamic yoga class. Improve flexibility, balance, and mental clarity through flowing sequences.",
       duration: "75 min",
       intensity: "Low",
-      trainer: "Emma Chen",
-      image: "/placeholder.svg?height=400&width=600",
+      trainer: "Eiméar McGrory",
+      image: "/images/comingsoon.jpg",
       category: "Mind & Body",
       schedule: [
         { day: "Monday", time: "7:00 PM" },
@@ -197,8 +197,8 @@ export default function ClassesPage() {
         "High-energy indoor cycling workout set to motivating music. Burn calories and improve cardiovascular health with this low-impact, high-intensity class.",
       duration: "45 min",
       intensity: "Medium",
-      trainer: "David Park",
-      image: "/placeholder.svg?height=400&width=600",
+      trainer: "Liam Hegarty",
+      image: "/images/comingsoon.jpg",
       category: "Cardio",
       schedule: [
         { day: "Tuesday", time: "6:00 AM" },
@@ -219,8 +219,8 @@ export default function ClassesPage() {
         "Improve everyday movement patterns with exercises that mimic daily activities. Enhance strength, stability, and mobility for real-world applications.",
       duration: "60 min",
       intensity: "Medium",
-      trainer: "Alex Rodriguez",
-      image: "/placeholder.svg?height=400&width=600",
+      trainer: "Patrick Gill",
+      image: "/images/comingsoon.jpg",
       category: "Strength",
       schedule: [
         { day: "Monday", time: "12:00 PM" },
@@ -241,8 +241,8 @@ export default function ClassesPage() {
         "Utilize the Pilates reformer machine to build core strength, improve posture, and increase flexibility through controlled, precise movements.",
       duration: "55 min",
       intensity: "Low",
-      trainer: "Sophia Martinez",
-      image: "/placeholder.svg?height=400&width=600",
+      trainer: "Eiméar McGrory",
+      image: "/images/comingsoon.jpg",
       category: "Flexibility",
       schedule: [
         { day: "Tuesday", time: "9:00 AM" },
@@ -258,8 +258,8 @@ export default function ClassesPage() {
         "Learn boxing techniques while getting a full-body workout. Improve coordination, speed, and cardiovascular fitness through boxing drills and conditioning exercises.",
       duration: "60 min",
       intensity: "High",
-      trainer: "James Wilson",
-      image: "/placeholder.svg?height=400&width=600",
+      trainer: "Liam Hegarty",
+      image: "/images/comingsoon.jpg",
       category: "Cardio",
       schedule: [
         { day: "Monday", time: "5:30 PM" },
@@ -275,8 +275,8 @@ export default function ClassesPage() {
         "Develop mental clarity and emotional calm through guided meditation practices. Learn techniques to manage stress and improve overall wellbeing.",
       duration: "30 min",
       intensity: "Low",
-      trainer: "Maya Patel",
-      image: "/placeholder.svg?height=400&width=600",
+      trainer: "Patrick Gill",
+      image: "/images/comingsoon.jpg",
       category: "Mind & Body",
       schedule: [
         { day: "Tuesday", time: "7:00 AM" },
@@ -297,8 +297,8 @@ export default function ClassesPage() {
         "Ultra-efficient workout using the 20 seconds on, 10 seconds off Tabata protocol. Maximize calorie burn and improve both aerobic and anaerobic fitness.",
       duration: "30 min",
       intensity: "High",
-      trainer: "Chris Taylor",
-      image: "/placeholder.svg?height=400&width=600",
+      trainer: "Liam Hegarty",
+      image: "/images/comingsoon.jpg",
       category: "HIIT",
       schedule: [
         { day: "Monday", time: "12:30 PM" },

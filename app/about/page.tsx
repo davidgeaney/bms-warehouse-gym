@@ -685,15 +685,15 @@ export default function AboutPage() {
                     <p className="text-white/80 font-medium">Locations</p>
                   </div>
                   <div>
-                    <div className="text-5xl font-bold text-white mb-2">15+</div>
+                    <div className="text-5xl font-bold text-white mb-2">3+</div>
                     <p className="text-white/80 font-medium">Expert Trainers</p>
                   </div>
                   <div>
-                    <div className="text-5xl font-bold text-white mb-2">5,000+</div>
+                    <div className="text-5xl font-bold text-white mb-2">200+</div>
                     <p className="text-white/80 font-medium">Happy Members</p>
                   </div>
                   <div>
-                    <div className="text-5xl font-bold text-white mb-2">30+</div>
+                    <div className="text-5xl font-bold text-white mb-2">20+</div>
                     <p className="text-white/80 font-medium">Weekly Classes</p>
                   </div>
                 </div>
