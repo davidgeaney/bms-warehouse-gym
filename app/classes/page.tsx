@@ -37,8 +37,22 @@ export default function ClassesPage() {
   const [selectedClass, setSelectedClass] = useState<ClassType | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [isTimetableModalOpen, setIsTimetableModalOpen] = useState(false)
+  const [isClient, setIsClient] = useState(false)
+  const [windowWidth, setWindowWidth] = useState(0)
   const modalRef = useRef<HTMLDivElement>(null)
   const featuredClassRef = useRef<HTMLDivElement>(null)
+
+  // Check if the component is mounted (client-side)
+  useEffect(() => {
+    setIsClient(true)
+    setWindowWidth(window.innerWidth)
+    const handleResize = () => setWindowWidth(window.innerWidth)
+    window.addEventListener("resize", handleResize)
+
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [])
 
   // Sample class data
   const classes: ClassType[] = [
@@ -446,7 +460,7 @@ export default function ClassesPage() {
                 <p className="text-white/80 mb-4">
                   Our flagship Functional Fitness Class suitable for all abilities. Join our exclusive group training program designed to prepare you for Functional Fitness races like Hyrox, BUA, and Dekafit.
                 </p>
-                {window.innerWidth > 768 && (
+                {isClient && windowWidth > 768 && (
                   <Link href="/contact?service=1">
                     <Button
                       className="bg-orange-500 hover:bg-orange-500/90 text-white font-medium w-fit"
@@ -624,7 +638,7 @@ export default function ClassesPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                       <div className="p-4 w-full">
-                        {window.innerWidth > 768 && (
+                        {isClient && windowWidth > 768 && (
                           <Link href={`/contact?service=${cls.id}`}>
                             <Button className="w-full bg-orange-500 hover:bg-orange-500/90 text-white font-medium">
                               Learn More
