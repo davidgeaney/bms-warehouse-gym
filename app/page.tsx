@@ -9,6 +9,8 @@ import { MembershipsPreview } from "@/components/memberships-preview"
 import { ContactSection } from "@/components/contact-section"
 import { AboutPreview } from "@/components/about-preview"
 import { Footer } from "@/components/footer"
+import { Link } from "react-router-dom"
+import { Button } from "@/components/ui/button"
 
 export default function Home() {
   return (

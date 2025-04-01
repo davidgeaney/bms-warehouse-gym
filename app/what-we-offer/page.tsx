@@ -657,12 +657,6 @@ export default function WhatWeOfferPage() {
                             </div>
                           ))}
                         </div>
-
-                        <Link href={`/contact?service=${offering.id}`}>
-                          <Button variant="outline" size="sm" className="w-full border-gray-200">
-                            Learn More
-                          </Button>
-                        </Link>
                       </div>
                     </div>
                   ))}
@@ -713,12 +707,6 @@ export default function WhatWeOfferPage() {
                             </div>
                           ))}
                         </div>
-
-                        <Link href={`/contact?service=${offering.id}`}>
-                          <Button variant="outline" size="sm" className="w-full border-gray-200">
-                            Learn More
-                          </Button>
-                        </Link>
                       </div>
                     </div>
                   ))}
@@ -769,12 +757,6 @@ export default function WhatWeOfferPage() {
                             </div>
                           ))}
                         </div>
-
-                        <Link href={`/contact?service=${offering.id}`}>
-                          <Button variant="outline" size="sm" className="w-full border-gray-200">
-                            Learn More
-                          </Button>
-                        </Link>
                       </div>
                     </div>
                   ))}

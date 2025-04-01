@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { ClassDetailModal } from "@/components/class-detail-modal"
 import { TimetableModal } from "@/components/timetable-modal"
+import Link from "next/link"
 
 // Class type definition
 type ClassType = {
@@ -445,18 +446,15 @@ export default function ClassesPage() {
                 <p className="text-white/80 mb-4">
                   Our flagship Functional Fitness Class suitable for all abilities. Join our exclusive group training program designed to prepare you for Functional Fitness races like Hyrox, BUA, and Dekafit.
                 </p>
-                <Button
-                  className="bg-orange-500 hover:bg-orange-500/90 text-white font-medium w-fit"
-                  onClick={() => {
-                    const fxClass = classes.find((c) => c.name === "FX Training")
-                    if (fxClass) {
-                      setSelectedClass(fxClass)
-                      setIsModalOpen(true)
-                    }
-                  }}
-                >
-                  Learn More
-                </Button>
+                {window.innerWidth > 768 && (
+                  <Link href="/contact?service=1">
+                    <Button
+                      className="bg-orange-500 hover:bg-orange-500/90 text-white font-medium w-fit"
+                    >
+                      Learn More
+                    </Button>
+                  </Link>
+                )}
               </div>
             </div>
 
@@ -626,9 +624,13 @@ export default function ClassesPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                       <div className="p-4 w-full">
-                        <Button className="w-full bg-orange-500 hover:bg-orange-500/90 text-white font-medium">
-                          View Details
-                        </Button>
+                        {window.innerWidth > 768 && (
+                          <Link href={`/contact?service=${cls.id}`}>
+                            <Button className="w-full bg-orange-500 hover:bg-orange-500/90 text-white font-medium">
+                              Learn More
+                            </Button>
+                          </Link>
+                        )}
                       </div>
                     </div>
                     <div className="absolute top-4 right-4">
@@ -901,9 +903,13 @@ export default function ClassesPage() {
             Join BMS Warehouse Gym today and transform your fitness with our state-of-the-art facilities, expert
             trainers, and supportive community.
           </p>
-          <Button className="bg-black text-white hover:bg-gray-900 font-medium rounded-full px-8 py-6 transition-all duration-300 hover:scale-105">
-            JOIN NOW
-          </Button>
+          <Link href="/memberships">
+            <Button
+              className="bg-black text-white hover:bg-gray-900 font-medium rounded-full px-8 py-6 transition-all duration-300 hover:scale-105"
+            >
+                JOIN NOW
+            </Button>
+          </Link>
         </div>
       </section>
 

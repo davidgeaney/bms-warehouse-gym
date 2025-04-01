@@ -9,7 +9,7 @@ import { Footer } from "@/components/footer"
 import { PageHero } from "@/components/page-hero"
 import { Button } from "@/components/ui/button"
 import { SectionHeading } from "@/components/section-heading"
-import { Users, Heart, Dumbbell, Play, Target, Sparkles } from "lucide-react"
+import { Users, Heart, Dumbbell, Play, Target, Sparkles, Link } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 type TeamMember = {
@@ -799,9 +799,11 @@ export default function AboutPage() {
                   We're always looking for passionate fitness professionals to join our team. If you're dedicated to
                   helping others achieve their fitness goals, we'd love to hear from you.
                 </p>
-                <Button className="bg-orange-500 hover:bg-orange-500/90 text-white font-medium">
-                  View Career Opportunities
-                </Button>
+                <a href="https://www.facebook.com/photo?fbid=1185776700223685&set=a.489762969825065" target="_blank" rel="noopener noreferrer">
+                  <Button className="bg-orange-500 hover:bg-orange-500/90 text-white font-medium">
+                    View Career Opportunities
+                  </Button>
+                </a>
               </div>
             </div>
           </section>
