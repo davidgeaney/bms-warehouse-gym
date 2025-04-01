@@ -49,7 +49,7 @@ export function ClassesPreview() {
       duration: "30 min",
       intensity: "High",
       category: "Strength",
-      image: "/images/pump.png",
+      image: "/images/PUMP.png",
       trainer: "Michael Brown",
       benefits: ["Increased muscle strength", "Improved muscle endurance", "Full-body workout"],
     },
